@@ -12,8 +12,9 @@
 <h1>Art Piece Details</h1>
 
 
-${Art.id }
-${Art.name }
+${art.id}
+${art.name}
+${art.artist}
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.skilldistillery.artgallery.entities.Art;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,16 @@ public class Art {
 	private int id;
 	
 	private String name;
+	private String artist;
+	
+	@Column(name="year_made")
+	private int yearMade;
+	
+	private String style;
+	private String description;
+	private long price;
+	private String location;
+	
 
 	public Art() {
 		super();
@@ -33,10 +44,60 @@ public class Art {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+
+	public String getArtist() {
+		return artist;
+	}
+
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+
+	public int getYearMade() {
+		return yearMade;
+	}
+
+	public void setYearMade(int yearMade) {
+		this.yearMade = yearMade;
+	}
+
+	public String getStyle() {
+		return style;
+	}
+
+	public void setStyle(String style) {
+		this.style = style;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public long getPrice() {
+		return price;
+	}
+
+	public void setPrice(long price) {
+		this.price = price;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
 
 	@Override
 	public String toString() {
-		return "Art [id=" + id + ", name=" + name + "]";
+		return "Art [id=" + id + ", name=" + name + ", artist=" + artist + ", yearMade=" + yearMade + ", artStyle="
+				+ style + ", description=" + description + ", price=" + price + ", location=" + location + "]";
 	}
 
 	

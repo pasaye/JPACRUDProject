@@ -18,8 +18,8 @@ public class ArtDaoJPAImpl implements ArtDAO {
 	private EntityManager em;
 
 	@Override
-	public Art findById(int filmId) {	
-		return em.find(Art.class, filmId);
+	public Art findById(int artId) {	
+		return em.find(Art.class, artId);
 	}
 
 	@Override
@@ -31,20 +31,36 @@ public class ArtDaoJPAImpl implements ArtDAO {
 
 	@Override
 	public Art create(Art art) {
-		// TODO Auto-generated method stub
-		return null;
+		em.persist(art);
+		return art;
 	}
 
 	@Override
 	public Art update(int id, Art art) {
-		// TODO Auto-generated method stub
-		return null;
+		Art newArt = em.find(Art.class, id);
+		
+		newArt.setName(art.getName());
+		newArt.setArtist(art.getArtist());
+		newArt.setYearMade(art.getYearMade());
+		newArt.setStyle(art.getStyle());
+		newArt.setDescription(art.getDescription());
+		newArt.setPrice(art.getPrice());
+		newArt.setLocation(art.getLocation());
+		
+		return newArt;
 	}
 
 	@Override
 	public boolean deleteById(int id) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		if (id != 0) {
+			Art art = em.find(Art.class, id);
+			em.remove(art);
+			return true;
+		}else {
+			System.out.println("No such work exist");
+			return false;
+		}
 	}
 
 }

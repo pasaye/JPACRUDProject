@@ -17,15 +17,35 @@
 </form>
 
 
-<c:forEach var="x"  items="${artList }">
+<form action="sendToAdd.do" method="CET" >
+<input type="submit" value="Add" >
+</form>
+
+<form action="update.do" mehtod="GET" >
+<input type="submit" value="Update" >
+</form>
+
+<form action="delete.do">
+<input type="number" name=id >
+<input type="submit" value="Delete"  >
+</form>
+
+	<c:forEach var="x"  items="${artList}">
 
 <ul>
-      <li>  <a href="getShow.do?id=${x.id }" >  ${x.id }</a></li>
+      <li>ID: ${x.id}</li>
+      <li> <a href="getShow.do?id=${x.id}" >Name: ${x.name}</a></li>
+      <li>Artist: ${x.artist}</li>
+      <li>Year made: ${x.yearMade}</li>
+      <li>Art Style: ${x.style}</li>
+      <li>About: ${x.description}</li>
+      <li>price: ${x.price}</li>
+      <li>Location: ${x.location}</li>
 </ul>
 	
-
-
 </c:forEach>
+
+
 
 
 </body>
