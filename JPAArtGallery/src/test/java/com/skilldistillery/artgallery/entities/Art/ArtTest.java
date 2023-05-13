@@ -79,5 +79,11 @@ class ArtTest {
 		assertNotNull(art);
 		assertTrue(art.getLocation().equals("Louvre Museum"));
    }
+	
+	@Test
+	void test_Image_Mapping() {
+		assertNotNull(art);
+		assertEquals("https://cdn.pariscityvision.com/library/image/5449.jpg", art.getImage());
+	}
 
 }

@@ -1,5 +1,7 @@
 package com.skilldistillery.artgallery.entities.Art;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,8 +25,8 @@ public class Art {
 	private String description;
 	private long price;
 	private String location;
+	private String image;
 	
-
 	public Art() {
 		super();
 	}
@@ -93,11 +95,21 @@ public class Art {
 	public void setLocation(String location) {
 		this.location = location;
 	}
+	
+	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
 
 	@Override
 	public String toString() {
-		return "Art [id=" + id + ", name=" + name + ", artist=" + artist + ", yearMade=" + yearMade + ", artStyle="
-				+ style + ", description=" + description + ", price=" + price + ", location=" + location + "]";
+		return "Art [id=" + id + ", name=" + name + ", artist=" + artist + ", yearMade=" + yearMade + ", style=" + style
+				+ ", description=" + description + ", price=" + price + ", location=" + location + ", image=" + image
+				+ "]";
 	}
 
 	
