@@ -15,6 +15,13 @@
 ${art.id}
 ${art.name}
 ${art.artist}
+${art.yearMade}
+${art.style}
+${art.description}
+${art.price }
+$art.location}
+
+<img alt="picture of the mona lisa" src="${art.image}">
 
 </body>
 </html>

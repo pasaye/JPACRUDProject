@@ -27,6 +27,7 @@ public class Art {
 	private String location;
 	private String image;
 	
+	
 	public Art() {
 		super();
 	}
@@ -104,6 +105,7 @@ public class Art {
 	public void setImage(String image) {
 		this.image = image;
 	}
+
 
 	@Override
 	public String toString() {

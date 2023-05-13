@@ -45,7 +45,6 @@ class ArtTest {
 	void test_Name_Mapping() {
 		assertNotNull(art);
 		assertTrue(art.getName().equals("Mona Lisa"));
-	
 	}
 	
 	@Test
@@ -85,5 +84,7 @@ class ArtTest {
 		assertNotNull(art);
 		assertEquals("https://cdn.pariscityvision.com/library/image/5449.jpg", art.getImage());
 	}
+	
+	
 
 }

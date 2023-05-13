@@ -41,6 +41,7 @@
       <li>About: ${x.description}</li>
       <li>price: ${x.price}</li>
       <li>Location: ${x.location}</li>
+
 </ul>
 	
 </c:forEach>
