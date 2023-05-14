@@ -35,7 +35,7 @@
 				</div>
 
 
-				<img alt="picture of the mona lisa" src="${art.image}">
+				<img alt="picture of the mona lisa" src="${art.image}" class="img-fluid" width="600" height="auto">
 
 
 				<div class="gps">

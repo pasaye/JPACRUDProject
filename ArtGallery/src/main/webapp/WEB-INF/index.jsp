@@ -6,11 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Art Gallery</title>
+<jsp:include page="bootHeader.jsp"/>
 </head>
 <body>
-<jsp:include page="bootHeader.jsp"/>
+<jsp:include page="navbar.jsp"/>
+<div class="container-fluid">
 
-<h1>Welcome to the show</h1>
+<h1>Art Management System</h1>
 
 <form action="getShow.do" method="GET">
   Art Work ID: <input type="text" name="id" />
@@ -22,33 +24,56 @@
 <input type="submit" value="Add" >
 </form>
 
-<form action="update.do" mehtod="GET" >
+
+<table class="table table-dark table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Artist</th>
+					<th>Year Made</th>
+					<th>Art Style</th>
+					<th>About</th>
+					<th>Price</th>
+					<th>Location</th>
+					<th>Edit/Delete</th>
+				</tr>
+			</thead>
+
+		<tbody></tbody>
+	<c:forEach var="x"  items="${artList}">
+		<tr>
+
+      <td> ${x.id}</td>
+      <td>  <a href="getShow.do?id=${x.id}" >Name: ${x.name}</a></td>
+      
+      <td>  ${x.artist} </td>
+      
+       <td>  ${x.yearMade} </td>
+       
+       <td>  ${x.style} </td>
+       <td> ${x.description} </td>
+       <td>  ${x.price} </td>
+      <td>  ${x.location} </td>
+      <td><form action="update.do" mehtod="GET" >
 <input type="submit" value="Update" >
 </form>
 
+
 <form action="delete.do">
-<input type="number" name=id >
-<input type="submit" value="Delete"  >
+<input type="number" name="id" placeholder="Enter ID# to Delete" >
+<input type="submit" value="Delete" >
 </form>
 
-	<c:forEach var="x"  items="${artList}">
+		 </td>
 
-<ul>
-      <li>ID: ${x.id}</li>
-      <li> <a href="getShow.do?id=${x.id}" >Name: ${x.name}</a></li>
-      <li>Artist: ${x.artist}</li>
-      <li>Year made: ${x.yearMade}</li>
-      <li>Art Style: ${x.style}</li>
-      <li>About: ${x.description}</li>
-      <li>price: ${x.price}</li>
-      <li>Location: ${x.location}</li>
 
-</ul>
-	
+	</tr>
 </c:forEach>
 
-
-
+	</tbody>
+	</table>
+	</div>
 <jsp:include page="bootFooter.jsp"/>
 </body>
 </html>
