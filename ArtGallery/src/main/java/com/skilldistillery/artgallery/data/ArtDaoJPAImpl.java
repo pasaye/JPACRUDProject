@@ -46,6 +46,7 @@ public class ArtDaoJPAImpl implements ArtDAO {
 		newArt.setDescription(art.getDescription());
 		newArt.setPrice(art.getPrice());
 		newArt.setLocation(art.getLocation());
+		newArt.setImage(art.getImage());
 		
 		return newArt;
 	}
