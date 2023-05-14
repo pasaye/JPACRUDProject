@@ -6,22 +6,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Art Gallery</title>
+<style>
+
+body{
+box-sizing:border-box;
+
+}
+
+#div {
+margin: 0;
+padding: 0;
+}
+</style>
 <jsp:include page="bootHeader.jsp"/>
 </head>
 <body>
-<jsp:include page="navbar.jsp"/>
-<div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+<h1 class="navbar-brand">Art Management System</h1>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+      <form class="d-flex" role="search" action="getShow.do" method="GET">
+         <input type="text" name="id" placeholder="Enter Art ID#" />
+ 		 <input class="btn btn-outline-success" type="submit" value="Show gallery" />
+	  </form>
+    </div>
+</nav>
 
-<h1>Art Management System</h1>
-
-<form action="getShow.do" method="GET">
-  Art Work ID: <input type="text" name="id" />
-  <input type="submit" value="Show gallery" />
-</form>
-
+<div id="div" class="container-fluid">
 
 <table class="table table-dark table-hover">
 			<thead>
+				<tr>
+					<th colspan="9" >
+					
+					<jsp:include page="navbar.jsp"/>
+					
+					</th>
+				
+				</tr>
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
@@ -61,8 +83,6 @@
 </form>
 
 		 </td>
-
-
 	</tr>
 </c:forEach>
 

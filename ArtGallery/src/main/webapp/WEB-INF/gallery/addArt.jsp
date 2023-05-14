@@ -6,10 +6,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<jsp:include page="../bootHeader.jsp"/>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+<h1 class="navbar-brand">Art Management System</h1>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+      <form class="d-flex" role="search" action="getShow.do" method="GET">
+         <input type="text" name="id" placeholder="Enter Art ID#" />
+ 		 <input class="btn btn-outline-success" type="submit" value="Show gallery" />
+	  </form>
+    </div>
+</nav>
 <jsp:include page="../navbar.jsp"/>
-<jsp:include page="../bootHeader.jsp"/>
 
 <h1>Add new Art</h1>
 
