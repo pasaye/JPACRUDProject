@@ -17,6 +17,10 @@ box-sizing:border-box;
 margin: 0;
 padding: 0;
 }
+
+#short {
+width: 170px;
+}
 </style>
 <jsp:include page="bootHeader.jsp"/>
 </head>
@@ -73,13 +77,13 @@ padding: 0;
        <td>  ${x.price} </td>
       <td>  ${x.location} </td>
       <td><form action="update.do" mehtod="GET" >
-<input type="submit" value="Update" >
+          <input class="btn btn-success " type="submit" value="Update" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" >
 </form>
 
-
+<br>
 <form action="delete.do">
-<input type="number" name="id" placeholder="Enter ID# to Delete" >
-<input type="submit" value="Delete" >
+<input id="short" type="number" name="id" placeholder="Enter ID# to Delete" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" >
+<input class="btn btn-success " type="submit" value="Delete" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" />
 </form>
 
 		 </td>

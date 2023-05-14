@@ -5,6 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style>
+
+li {
+list-style: none;
+}
+
+</style>
+
+
 </head>
 <body>
 <jsp:include page="bootHeader.jsp"/>
@@ -18,9 +28,15 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-  <button type="button" class="btn btn-secondary"><a href="index.do">Home</a></button>
-<button type="button" class="btn btn-secondary"><a href="/update.do">Update</a></button>
-<button type="button" class="btn btn-secondary"><a href="/sendToAdd.do">Add</a></button>
+  
+  <button type="button" class="btn btn-info"><a href="index.do">Home</a></button>
+  <br>
+  <br>
+ 
+<button type="button" class="btn btn-info"><a href="/update.do">Update</a></button>
+<br>
+  <br>
+<button type="button" class="btn btn-info"><a href="/sendToAdd.do">Add</a></button>
   
     
   </div>
