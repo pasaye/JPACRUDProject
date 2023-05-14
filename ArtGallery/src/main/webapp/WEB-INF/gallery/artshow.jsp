@@ -23,5 +23,16 @@ $art.location}
 
 <img alt="picture of the mona lisa" src="${art.image}">
 
+
+<div class="gps">
+		<iframe 
+			src="https://www.google.com/maps?q=${art.location}&z=10&output=embed" 
+			width="600" 
+			height="450" 
+			frameborder="0" 
+			allowfullscreen>
+		</iframe>
+	</div>
+
 </body>
 </html>

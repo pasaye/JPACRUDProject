@@ -43,6 +43,11 @@
 <input id="locat" type="text" name="location"  >
 </label>
 <br>
+<label for="pic">Paste: image url
+<input id="pic" type="text" name="image" >
+</label>
+<br>
+
 <input type="submit" value="Add">
 
 </form>

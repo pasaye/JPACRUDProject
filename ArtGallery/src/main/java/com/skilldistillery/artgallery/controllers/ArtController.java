@@ -27,15 +27,12 @@ public class ArtController {
 	public String getArtId(@RequestParam int id, Model model) {
 		Art art = dao.findById(id);
 		model.addAttribute("art", art);
-		return "gallery/artshow";
-		
+		return "gallery/artshow";	
 	}
-	
 	
 	@RequestMapping(path={"add.do"}, method = RequestMethod.POST)
 	public String createArt(Art art, RedirectAttributes redir) {
 		redir.addFlashAttribute("newArt", dao.create(art));
-		//model.addAttribute("newArt", dao.create(art));
 		return "redirect:index.do";
 	}
 	
