@@ -20,11 +20,6 @@
 </form>
 
 
-<form action="sendToAdd.do" method="CET" >
-<input type="submit" value="Add" >
-</form>
-
-
 <table class="table table-dark table-hover">
 			<thead>
 				<tr>
@@ -45,7 +40,7 @@
 		<tr>
 
       <td> ${x.id}</td>
-      <td>  <a href="getShow.do?id=${x.id}" >Name: ${x.name}</a></td>
+      <td>  <a href="getShow.do?id=${x.id}" >${x.name}</a></td>
       
       <td>  ${x.artist} </td>
       
@@ -72,6 +67,23 @@
 </c:forEach>
 
 	</tbody>
+	<tfoot>
+	
+		<tr>
+		<td colspan="9">
+		<form action="sendToAdd.do" method="CET" >
+		
+	<div class="d-grid gap-2">
+  
+<input class="btn btn-primary"  type="submit" value="Add" >
+ 
+</div>	
+		
+</form>	
+		</td>
+		</tr>
+	
+	</tfoot>
 	</table>
 	</div>
 <jsp:include page="bootFooter.jsp"/>
