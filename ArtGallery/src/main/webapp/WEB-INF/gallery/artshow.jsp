@@ -8,31 +8,53 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h1>Art Piece Details</h1>
-
-
-${art.id}
-${art.name}
-${art.artist}
-${art.yearMade}
-${art.style}
-${art.description}
-${art.price }
-$art.location}
-
-<img alt="picture of the mona lisa" src="${art.image}">
+<jsp:include page="../navbar.jsp"/>
+<jsp:include page="../bootHeader.jsp"/>
 
 
-<div class="gps">
-		<iframe 
-			src="https://www.google.com/maps?q=${art.location}&z=10&output=embed" 
-			width="600" 
-			height="450" 
-			frameborder="0" 
-			allowfullscreen>
-		</iframe>
-	</div>
+<c:choose>
+	<c:when test="${! empty art.id }">
+			<h1>Art Piece Details</h1>
 
+
+
+				${art.name}
+				${art.artist}
+				${art.yearMade}
+				${art.style}
+				${art.description}
+				${art.price }
+				$art.location}
+
+
+
+				<div class='math'>
+
+				This painting is  <c:out value="${2023 - art.yearMade}"></c:out> years old.
+
+				</div>
+
+
+				<img alt="picture of the mona lisa" src="${art.image}">
+
+
+				<div class="gps">
+					<iframe 
+						src="https://www.google.com/maps?q=${art.location}&z=10&output=embed" 
+						width="600" 
+						height="450" 
+						frameborder="0" 
+						allowfullscreen>
+					</iframe>
+				</div>
+
+	</c:when>
+	<c:otherwise>
+	<h1>Please select the correct Art ID: number. Otherwise Art Piece may not exist</h1>
+	
+	</c:otherwise>
+</c:choose>
+
+<jsp:include page="../bootFooter.jsp"/>
 </body>
 </html>

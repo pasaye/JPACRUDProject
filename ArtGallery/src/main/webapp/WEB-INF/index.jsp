@@ -8,6 +8,7 @@
 <title>Art Gallery</title>
 </head>
 <body>
+<jsp:include page="bootHeader.jsp"/>
 
 <h1>Welcome to the show</h1>
 
@@ -48,6 +49,6 @@
 
 
 
-
+<jsp:include page="bootFooter.jsp"/>
 </body>
 </html>

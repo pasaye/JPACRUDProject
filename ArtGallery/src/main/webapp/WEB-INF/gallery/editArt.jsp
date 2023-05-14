@@ -8,6 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="../navbar.jsp"/>
+<jsp:include page="../bootHeader.jsp"/>
 
 <h1>Edit Your Art</h1>
 
@@ -17,19 +19,19 @@ ${edit }
 
 
 <label for="id">Enter ID:
-<input id="id" type="number" name="id" >
+<input id="id" type="number" name="id" required min="1">
 </label>
 <br>
 <label for="name">Name of Piece?
-<input id="name" type="text" name="name"  >
+<input id="name" type="text" name="name" required >
 </label>
 <br>
 <label for="art">Who made it?
-<input for="art" type="text" name="artist"  >
+<input for="art" type="text" name="artist" required >
 </label>
 <br>
 <label for="year" >Year made?
-<input id="year" type="number" name="yearMade"  >
+<input id="year" type="number" name="yearMade" min="1" required >
 </label>
 <br>
 <label for="work">Art Style?
@@ -37,11 +39,11 @@ ${edit }
 </label>
 <br>
 <label for="desc">Description:
-<input id="desc" type="text" name="description"  >
+<input id="desc" type="text" name="description" required >
 </label>
 <br>
 <label for="cost">Price:
-<input id="cost" type="number" name="price"  >
+<input id="cost" type="number" name="price" min="0" max="9,223,372,036,854,775,807" >
 </label>
 <br>
 <label for="locat">Location:
@@ -56,5 +58,6 @@ ${edit }
 
 </form>
 
+<jsp:include page="../bootFooter.jsp"/>
 </body>
 </html>
