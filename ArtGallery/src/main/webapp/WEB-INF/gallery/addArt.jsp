@@ -28,15 +28,11 @@
 	<div
 		class="container min-vh-100 d-flex justify-content-center align-items-center">
 
-		<form action="edit.do" method="POST"
+		<form action="add.do" method="POST"
 			style="width: 500px; background-color: rgba(192, 185, 221, .3); background-blend-mode: overlay; background-repeat: no-repeat; background-size: contain; border: 2px solid rgb(192, 185, 221); border-radius: 8px;">
 
 			<jsp:include page="../navbar.jsp" />
 
-			<div class="mb-3">
-				<label for="id" class="form-label">Enter ID: </label> <input id="id"
-					type="number" name="id" required min="1" class="form-control">
-			</div>
 			<div class="mb-3">
 				<label for="name" class="form-label">Name of Piece:</label> <input
 					id="name" type="text" name="name" required class="form-control">
@@ -73,7 +69,7 @@
 					id="pic" type="text" name="image" class="form-control">
 			</div>
 
-			<input type="submit" class="btn btn-primary" value="Update" name="id">
+			<input type="submit" class="btn btn-primary" value="Add">
 
 		</form>
 	</div>
